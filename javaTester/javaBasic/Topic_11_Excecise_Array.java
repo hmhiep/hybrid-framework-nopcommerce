@@ -14,19 +14,19 @@ public class Topic_11_Excecise_Array {
 				x = number[i];
 			}
 		}
-		System.err.println("Max number = " + x);
+		System.out.println("Max number = " + x);
 	}
 	
 	@Test
 	public void TC_02_Sum_First_And_Last_Number() {
-		System.err.println(number[0] + number[number.length - 1]);
+		System.out.println(number[0] + number[number.length - 1]);
 	}
 	
 	@Test
 	public void TC_03() {
 		for (int i = 0; i < number.length; i++) {
 			if (number[i] % 2 == 0) {
-				System.err.println("Even number = " + number[i]);
+				System.out.println("Even number = " + number[i]);
 			}
 		}
 	}
@@ -35,7 +35,7 @@ public class Topic_11_Excecise_Array {
 	public void TC_04() {
 		for (int i = 0; i < number.length; i++) {
 			if (number[i] >= 0 && number[i] <= 10) {
-				System.err.println("Number in (0 <= number <= 10) = " + number[i]);
+				System.out.println("Number in (0 <= number <= 10) = " + number[i]);
 			}
 		}
 	}
@@ -47,8 +47,8 @@ public class Topic_11_Excecise_Array {
 		for (int i = 0; i < number.length; i++) {
 			sum += number[i];
 			}
-		System.err.println("Sum all number = " + sum);
+		System.out.println("Sum all number = " + sum);
 		float average = sum/number.length;
-		System.err.println("Average all number = " + average);
+		System.out.println("Average all number = " + average);
 	}	
 }
