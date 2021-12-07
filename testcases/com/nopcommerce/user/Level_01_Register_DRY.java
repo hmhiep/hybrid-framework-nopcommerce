@@ -12,7 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 
-public class User_01_Register {
+public class Level_01_Register_DRY {
 	WebDriver driver;
 	String emailAddress;
 	String projectPath = System.getProperty("user.dir");
