@@ -1,8 +1,40 @@
 package pageObjects;
 
-public class LoginPageObject {
+import org.openqa.selenium.WebDriver;
 
-	public void enterToUsernameTextbox() {
-		
+import commons.BasePage;
+import pageUIs.LoginPageUI;
+
+public class LoginPageObject extends BasePage{
+	private WebDriver driver;
+
+	public LoginPageObject(WebDriver driver) {
+		this.driver = driver;
 	}
+
+	public void clickToLoginButton() {
+		waitForElementClickable(driver, LoginPageUI.LOGIN_BUTTON);
+		clickToElement(driver, LoginPageUI.LOGIN_BUTTON);
+	}
+
+	public String getErrorMessageAtEmailTextbox() {
+		waitForAllElementVisible(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.EMAIL_ERROR_MESSAGE);
+	}
+
+	public void inputToEmailTextbox(String invalidEmail) {
+		waitForAllElementVisible(driver, LoginPageUI.EMAIL_TEXTBOX);
+		sendkeyToElement(driver, LoginPageUI.EMAIL_TEXTBOX, invalidEmail);
+	}
+
+	public String getErrorMessageUnsuccessfull() {
+		waitForAllElementVisible(driver, LoginPageUI.UNSUCCESSFULL_ERROR_MESSAGE);
+		return getElementText(driver, LoginPageUI.UNSUCCESSFULL_ERROR_MESSAGE);
+	}
+
+	public void inputToPasswordTextbox(String incorrectPassword) {
+		waitForAllElementVisible(driver, LoginPageUI.PASSWORD_TEXTBOX);
+		sendkeyToElement(driver, LoginPageUI.PASSWORD_TEXTBOX, incorrectPassword);
+	}
+
 }
